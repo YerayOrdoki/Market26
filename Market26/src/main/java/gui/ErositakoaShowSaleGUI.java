@@ -49,7 +49,7 @@ public class ErositakoaShowSaleGUI extends JFrame {
     private JLabel erroreEtiketa = new JLabel();
     private JLabel egoeraEremua = new JLabel();
     
-    private final JLabel erosketaDataEtiketa = new JLabel("NOSE Q ES"); //$NON-NLS-1$ //$NON-NLS-2$
+    private final JLabel erosketaDataEtiketa = new JLabel(""); //$NON-NLS-1$ //$NON-NLS-2$
     private final JLabel argitalpenDataIzenburuEtiketa = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateSaleGUI.PublicationDate"));
     private final JLabel erosketaDataIzenburuEtiketa = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("ErositakoakGUI.BoughtDate"));
 

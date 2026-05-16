@@ -966,7 +966,7 @@ public class DataAccess {
 
 	/**
 	 * Salaketa berri bat sortzen du.
-	 *
+	 *e
 	 * @param mota Salaketaren mota.
 	 * @param produktoaNumber Produktuaren identifikatzailea.
 	 * @param pubDate Argitalpen-data.
