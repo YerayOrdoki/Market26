@@ -37,6 +37,5 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/yeray/Escritorio/objectdb-2.6.9/bin/objectdb.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

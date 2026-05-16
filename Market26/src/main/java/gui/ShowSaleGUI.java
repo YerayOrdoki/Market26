@@ -380,25 +380,38 @@ public class ShowSaleGUI extends JFrame {
             btnErreserbatu.setColourRED();
         }
 
-        btnErreserbatu.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (saltzaile == null) {
-                    return;
-                }
+      btnErreserbatu.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (saltzaile == null || vip == null) {
+            return;
+        }
 
-                if (vip.daukaErreserba(sale)) {
-                    facade.saleDesErreserbatu(sale.getSaleNumber(), vip.getId());
-                    btnErreserbatu.setText(ResourceBundle.getBundle("Etiquetas").getString("ShowSaleGUI.Erreserbatu"));
-                    btnErreserbatu.setColourMOREA();
-                    erreserbatuta = false;
-                } else {
-                    facade.saleErreserbatu(sale.getSaleNumber(), vip.getId());
-                    btnErreserbatu.setText(ResourceBundle.getBundle("Etiquetas").getString("ShowSaleGUI.Erreserbatu2"));
-                    btnErreserbatu.setColourRED();
-                    erreserbatuta = true;
-                }
-            }
-        });
+        if (erreserbatuta) {
+            
+            facade.saleDesErreserbatu(sale.getSaleNumber(), vip.getId());
+            erreserbatuta = false;
+
+            btnErreserbatu.setText(
+                ResourceBundle.getBundle("Etiquetas").getString("ShowSaleGUI.Erreserbatu")
+            );
+            btnErreserbatu.setColourMOREA();
+        } else {
+            
+            facade.saleErreserbatu(sale.getSaleNumber(), vip.getId());
+            erreserbatuta = true;
+
+            btnErreserbatu.setText(
+                ResourceBundle.getBundle("Etiquetas").getString("ShowSaleGUI.Erreserbatu2")
+            );
+            btnErreserbatu.setColourRED();
+        }
+
+       
+        btnErreserbatu.revalidate();
+        btnErreserbatu.repaint();
+    }
+});
 
         if (erreserbatuta) {
             btnErreserbatu.setText(ResourceBundle.getBundle("Etiquetas").getString("ShowSaleGUI.Erreserbatu2"));
