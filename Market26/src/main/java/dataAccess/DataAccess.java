@@ -732,7 +732,7 @@ public class DataAccess {
 		query.setParameter(2, argitalpenData);
 		System.out.println(query.toString());
 
-		System.out.println("tus muertos");
+		
 		List<Sale> salmentak = query.getResultList();
 		for (Sale salmenta : salmentak) {
 			if (!salmenta.getSeller().isBanned()) {
