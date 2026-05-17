@@ -67,7 +67,7 @@ public class Registered extends User {
 	// ----ERAIKITZAILEAK----
 	public Registered(String email, String name, String pass) {
 		super(email, name, pass);
-		this.saldoa = 500;
+		this.saldoa = 0;
 		this.isBanned = false;
 		this.vip=null;
 
