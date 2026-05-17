@@ -494,6 +494,11 @@ public class ShowSaleGUI extends JFrame {
         });
         btnSaskia.setBounds(90, 445, 267, 46);
         getContentPane().add(btnSaskia);
+        if (besteVipBatekErreserbatuta || (vip2 == null && unekoSale.getSale().isErreserbatuta())) {
+            btnSaskia.setText(ResourceBundle.getBundle("Etiquetas").getString("ShowSaleGUI.ErreserbatutaDago"));
+            btnSaskia.setEnabled(false);
+           
+        }
 
         textField = new JTextField();
         System.out.println("proba"
